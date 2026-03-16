@@ -29,7 +29,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ message = "Carregando..."
         {/* Logo sutil ao fundo */}
         <div className="mt-8 opacity-10">
           <img 
-            src="src/app/assets/images/Logo.png" 
+            src="/app/assets/images/Logo.png" 
             alt="Logo" 
             className="w-24 grayscale"
           />

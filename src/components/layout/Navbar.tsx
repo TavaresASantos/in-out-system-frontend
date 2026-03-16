@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -10,39 +9,38 @@ const Navbar = () => {
   const pathname = usePathname();
 
   const menuItems = [
-        { icon: Video, label: 'Monitoramento', href: '/cameras' },
+    { icon: Video, label: 'Monitoramento', href: '/cameras' },
     { icon: BarChart, label: 'Painel', href: '/' },
     { icon: FileText, label: 'Relatórios', href: '/relatorios' },
-
   ];
 
   return (
     <nav className="w-full bg-brand-darkGreen text-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6">
-
         <div className="flex items-center justify-between h-20">
 
-          {/* Logo */}
-    <div className="flex items-center gap-4">
-    <img
-        src="/imagens-apoio/Logo.png"
-        alt="Logo Parque da Matinha"
-        className="h-12 w-auto object-contain"
-    />
+          {/* LOGO */}
+          <div className="flex items-center gap-4">
+            <img
+              src="/Logo.png"
+              alt="Logo Parque da Matinha"
+              className="h-12 w-auto object-contain"
+            />
 
-            {/* <div className="hidden md:block">
+            {/* 
+            <div className="hidden md:block">
               <span className="text-lg font-black block leading-tight">
                 IN-OUT SYSTEM
               </span>
               <span className="text-[10px] text-brand-lightGreen uppercase tracking-widest opacity-80">
                 Parque da Matinha
               </span>
-            </div> */}
+            </div> 
+            */}
           </div>
 
           {/* MENU CENTRAL */}
           <div className="hidden md:flex items-center space-x-10">
-
             {menuItems.map((item) => {
               const isActive = pathname === item.href;
 
@@ -61,12 +59,10 @@ const Navbar = () => {
                 </Link>
               );
             })}
-
           </div>
 
           {/* LADO DIREITO */}
           <div className="flex items-center gap-6">
-
             <div className="h-8 w-[1px] bg-white/20"></div>
 
             <button
@@ -75,11 +71,9 @@ const Navbar = () => {
             >
               <LogOut size={18} />
             </button>
-
           </div>
 
         </div>
-
       </div>
     </nav>
   );
